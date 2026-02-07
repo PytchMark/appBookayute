@@ -3,14 +3,14 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy frontend package files
-COPY frontend/package.json frontend/yarn.lock* ./
+# Copy package files from root
+COPY package.json yarn.lock* ./
 
 # Install dependencies
 RUN yarn install --frozen-lockfile || yarn install
 
-# Copy frontend source code
-COPY frontend/ ./
+# Copy all source code
+COPY . .
 
 # Build the app
 RUN yarn build
