@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import DashboardLayout, { adminNavItems } from '../../components/dashboard/DashboardLayout';
 import AdminOverview from './AdminOverview';
@@ -9,9 +9,16 @@ import { useAuthStore } from '../../lib/store';
 
 const AdminDashboardRouter: React.FC = () => {
   const { isAuthenticated, isLoading, user } = useAuthStore();
+  const [hydrated, setHydrated] = useState(false);
 
-  // Show loading state
-  if (isLoading) {
+  useEffect(() => {
+    // Wait for zustand hydration
+    const timeout = setTimeout(() => setHydrated(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  // Show loading state while hydrating
+  if (!hydrated || isLoading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="animate-pulse text-zinc-500">Loading...</div>
