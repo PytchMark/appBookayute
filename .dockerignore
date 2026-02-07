@@ -1,6 +1,5 @@
 node_modules
-frontend/node_modules
-backend/__pycache__
+dist
 .git
 .env
 .env.local
@@ -8,3 +7,9 @@ backend/__pycache__
 npm-debug.log
 *.log
 .DS_Store
+backend/__pycache__
+.vite
+test_reports
+memory
+.emergent
+backend_test.py
