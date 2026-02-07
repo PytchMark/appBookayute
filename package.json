@@ -1,4 +1,3 @@
-
 {
   "name": "book-a-yute",
   "private": true,
@@ -11,11 +10,14 @@
     "start": "serve -s dist -l ${PORT:-8080}"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.95.3",
+    "framer-motion": "^11.11.11",
+    "lucide-react": "^0.563.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router-dom": "^7.12.0",
-    "framer-motion": "^11.11.11",
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
