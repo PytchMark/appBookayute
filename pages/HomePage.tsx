@@ -37,9 +37,18 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center px-6 overflow-hidden">
         <motion.div style={{ opacity }} className="absolute inset-0 z-0">
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover grayscale brightness-[0.2]">
-            <source src="https://storage.googleapis.com/samplemedia1/12100535_3840_2160_24fps.mp4" type="video/mp4" />
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            className="w-full h-full object-cover brightness-[0.3]"
+            style={{ filter: 'hue-rotate(180deg)' }}
+          >
+            <source src="https://res.cloudinary.com/dd8pjjxsm/video/upload/v1770447345/From_KlickPin_CF_New_Podcast_w__Calm_The_Chaos_Video___Business_podcasts_Podcasts_Podcast_studio_t6zh1b.mp4" type="video/mp4" />
           </video>
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40" />
         </motion.div>
         
         <div className="relative z-10 max-w-6xl text-center">
