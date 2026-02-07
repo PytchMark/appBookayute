@@ -17,8 +17,9 @@ const HomePage: React.FC = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowModal(true), 3000);
-    return () => clearTimeout(timer);
+    // Modal disabled for cleaner first load - uncomment to re-enable
+    // const timer = setTimeout(() => setShowModal(true), 3000);
+    // return () => clearTimeout(timer);
   }, []);
 
   const eventTypes = [
