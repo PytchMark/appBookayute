@@ -43,13 +43,13 @@ const HomePage: React.FC = () => {
             muted 
             loop 
             playsInline 
-            className="w-full h-full object-cover brightness-[0.3]"
-            style={{ filter: 'hue-rotate(180deg)' }}
+            className="w-full h-full object-cover"
+            style={{ filter: 'hue-rotate(180deg) brightness(0.4) saturate(1.3)' }}
           >
             <source src="https://res.cloudinary.com/dd8pjjxsm/video/upload/v1770447345/From_KlickPin_CF_New_Podcast_w__Calm_The_Chaos_Video___Business_podcasts_Podcasts_Podcast_studio_t6zh1b.mp4" type="video/mp4" />
           </video>
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/40" />
         </motion.div>
         
         <div className="relative z-10 max-w-6xl text-center">
