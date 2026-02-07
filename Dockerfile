@@ -3,14 +3,14 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files
-COPY package.json yarn.lock* ./
+# Copy frontend package files
+COPY frontend/package.json frontend/yarn.lock* ./
 
 # Install dependencies
-RUN yarn install --frozen-lockfile
+RUN yarn install --frozen-lockfile || yarn install
 
-# Copy source code
-COPY . .
+# Copy frontend source code
+COPY frontend/ ./
 
 # Build the app
 RUN yarn build
@@ -25,7 +25,6 @@ RUN npm install -g serve
 
 # Copy built files from builder
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/package.json ./
 
 # Set environment variables
 ENV NODE_ENV=production
