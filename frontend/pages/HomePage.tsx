@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
               BOOK-A-<span className="text-brand-red">YUTE.</span>
             </h1>
             <p className="text-lg md:text-xl text-zinc-400 font-light mb-12 max-w-2xl mx-auto tracking-wide leading-relaxed">
-              Curated roster powered by Push-A-Yute. Represented professionally. <br className="hidden md:block" /> Booked properly. No DM gymnastics.
+              Curated roster powered by Pytch. Represented professionally. <br className="hidden md:block" /> Booked properly. No DM gymnastics.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link to="/roster" className="w-full sm:w-auto bg-brand-red text-white px-14 py-6 rounded-2xl text-[11px] font-black uppercase tracking-[0.25em] hover:bg-red-700 transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(226,29,29,0.4)]">
